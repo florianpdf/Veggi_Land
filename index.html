@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery-1.11.2.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8" />
+    <title>Veggi_Land</title>
+    <style>
+        body{
+            font-family: 'Indie Flower', cursive;
+            max-width: 650px;
+            margin: auto;
+            background-image: url("http://images.forwallpaper.com/files/thumbs/preview/23/233410__full-hd-wallpapers-256x1440-texture-texture-blue-green-background_p.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        header{
+            text-align: center;
+            font-size: 30px;
+        }
+        h1{
+            margin-bottom: -30px;
+        }
+        img{
+            float: left;
+            height: 170px;
+            margin-right: 20px;
+            border-radius: 20px 0 0 20px;
+        }
+        p{
+            float: right;
+            position: relative;
+            background: rgba(034,047,014,0.8);
+            background: linear-gradient(bottom, rgba(034,047,014,7), rgba(034,047,014,.2));
+            background: -webkit-linear-gradient(bottom, rgba(034,047,014,.7), rgba(034,047,014,.2));
+            background: -moz-linear-gradient(bottom, rgba(034,047,014,.7), rgba(034,047,014,.2));
+            height: 170px;
+            font-size:17px;
+            padding-right: 20px;
+            border-radius: 20px;
+            width: auto;
+        }
+        strong{
+            text-decoration: underline;
+        }
+        .price{
+            position: relative;
+            float: right;
+        }
+       
+        @media (max-width: 600px) {
+            header{
+                font-size: 20px;
+                margin-bottom: -20px;
+            }
+            h1{
+                margin: -5px 0 -30px 0;
+            }
+            img{
+                height: 170px;
+                margin-right: 10px;
+                margin-left: -10px;
+            }
+            p{
+                display: block;
+                height: 170px;
+                font-size: 15px;
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+            strong, span{
+                font-size: 17px;
+            }
+            small{
+                opacity: 0;
+            }
+            
+            .show-description img {
+                display: none;
+                }
+
+            .show-description small {
+                opacity: 1;
+                font-size: 15px;
+                }
+            .show-description p {
+                color:red;
+            }
+
+    </style>
+    
+</head>
+
+<body>
+    <header>
+        <h1>Veggi_Land test Restaurant</h1>
+        <h2>Manger bon, manger Veggan</h2>
+    </header>
+    <section>
+        <article id="menu_1">
+            <p><img src="http://frcdn.ar-cdn.com/recipes/xlarge/112c6359-c127-494d-9a80-78021af79901.jpg"/><strong>Seitan pané</strong><span class="price">10€</span></br><small>Le seitan a une texture ferme comparable à de la viande, et est cuit de la même façon. Il est ici trempé dans de la sauce tamari et des épices avant d'être pané. Il est accompagneé à votre convenance de de riz, légumes,pommes de terre en purée, ou de pâtes.</small></p>
+        </article>
+        <article id="menue_2">
+            <p><img src="http://frcdn.ar-cdn.com/recipes/xlarge/9fcbadf5-03d7-47c1-a140-bb3cc2e4054a.jpg"/><strong>Couscous végétalien à la marocaine</strong><span class="price">10€</span></br><small>Des carottes, des navets, des patates douces, des courgettes et des poivrons rouges, tout ça mijoté avec des pois chiches et de la sauce tomate, et saupoudré d’épices. Servi sur de la graine de couscous.</small></p>
+        </article>
+        <article id="menu_3">
+            <p><img src="http://frcdn.ar-cdn.com/recipes/xlarge/23f07b86-0d59-481d-a6bb-08c9f1774084.jpg"/><strong>Salade de pâtes gaspacho</strong><span class="price">10€</span></br><small>Une délicieuse salade de saison rehaussée par une sauce tomate au citron vert et des piments émincés.</small></p>
+        </article>
+    </section>
+
+<script>
+    
+    $('p').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
+</html>
